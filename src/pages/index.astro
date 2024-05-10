@@ -1,11 +1,99 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Logo from '../components/Logo.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1 style="color: aliceblue;">DidacDV</h1>
-		<Header />
-	</main>
+<Layout title="DidacDV">
+	<div id = "genDiv">
+		<section id = "generalinfo">
+			<h1>Hey, i'm Dídac!</h1>
+			<h3>Informatic Engineering student at UPC, FIB currently at second year.
+				Aiming to specialize myself into <span>software development.</span>
+				<br>
+				Currently avalaible for a job in the <span>tech field</span>.
+				I would love to expand my skills and knowledgement through
+				some experience.
+				</br>
+				I live in <span>Barcelona, Catalonia</span>.
+				<div>
+					<Logo/>
+				</div>
+			</h3>
+		</section>
+
+		<section id="contactme">
+			<h1>How to contact me</h1>
+			<h3>Here are some ways to contact me</h3>
+		</section>
+	</div>
 </Layout>
+
+
+<style>
+	html {
+		color: white;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1 {
+		font-size: xx-large;
+		margin-bottom: 0;
+		align-self: center;
+	}
+
+	#genDiv {
+		display: flex;
+		flex-direction: column;
+		width: max-content;
+		margin-left: 20%;
+		margin-right: 20%;
+		align-items: center;
+	}
+
+	#generalinfo {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5%;
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+		width: auto;
+	}
+
+	#generalinfo h3 {
+		font-size: 19px;
+		width: max-content;
+		margin-top: 3%;
+		font-weight:400;
+	}
+
+	#generalinfo h3 span {
+		color:lightblue;
+	}
+
+	#generalinfo div {
+		margin-top: 0px;
+		align-self: center;
+		display: flex;
+		gap: 2%;
+		justify-content: center;
+	}
+
+	#contactme {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5%;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+	}
+
+	#contactme h3 {
+		font-size: 19px;
+		width: auto;
+		margin-top: 3%;
+		font-weight: 400;
+		align-self: flex-start;
+	}
+	
+</style>
