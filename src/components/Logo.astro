@@ -1,33 +1,66 @@
 ---
 import LinkedIn from "./icons/LinkedIn.astro"
----
-<LinkedIn/>
-<p>
+import GitHub from "./icons/GitHub.astro"
+import Mail from "./icons/Mail.astro"
 
-    <a href="https://www.linkedin.com/in/d%C3%ADdac-dalmases/"  target="_blank">
-        <span>My Linked</span>in
-    </a>
-</p>
+let urlLinkedin = "https://www.linkedin.com/in/d%C3%ADdac-dalmases/"
+let urlGithub = "https://github.com/DidacDV"
+let urlGmail = "https://mail.google.com/mail/u/0/?fs=1&to=dalmasesdidac@gmail.com&tf=cm"
+---
+
+<div id = "icons">
+    <div class = "iconContainer">
+        <a href= {urlLinkedin}><LinkedIn/></a>
+        <a class="iconName" href= {urlLinkedin}>My LinkedIn</a>
+    </div>
+    <div class = "iconContainer">
+        <a href= {urlGithub}><GitHub/></a>
+        <a class="iconName" href= {urlGithub}>My GitHub</a>
+    </div>
+    <div class = "iconContainer">
+        <a href= {urlGmail}><Mail/></a>
+        <a class="iconName" href = {urlGmail}>My Gmail</a>
+    </div>
+</div>
 
 
 <style>
-    p {
-        background-color: #0072b1;
-        width: max-content;
-        transition: transform 0.25s ease;
-        height: 20%;
+    #icons {
+        margin-top: 3%;
+        display: flex;
+        align-items: center;
+        gap: 10%;
     }
+        #icons div {
+            display:flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease;
+            transform: perspective(1px) translateZ(0);
+            will-change: transform;
+        }
+        
+        #icons .iconContainer:hover {
+            scale: 1.05;
+        }
+            #icons .iconContainer:hover .iconName {
+                    background-color:white;
+                    color: black;
+                }
 
-    p:hover {
-        transform: scale(1.05);
-    }
+            #icons .iconName {
+                color: white;
+                padding: 10px;
+                width: max-content;
+                border-radius: 30%;
+                font-size: 17.5;
+            }
 
-    p span {
-        color: black;
-    }
-
-    p a {
+    a {
         text-decoration: none;
-        color: inherit;
+        color: white;
     }
+
 </style>
