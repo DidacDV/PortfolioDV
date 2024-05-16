@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
+import Projects from './Projects.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+const discLogo = "./src/components/icons/DiscordLogo.png";
+const botLogo = "./src/components/icons/botLogo.jpg";
 ---
 
 <Layout title="DidacDV Portfolio - Informatic Engineer">
@@ -30,6 +34,9 @@ import Logo from '../components/Logo.astro';
 
 		<section id = "projects">
 			<h1>Projects</h1>
+			<div id = "projectContainer">
+				<ProjectCard name='DiscordBot', desc='Bot made with python', image= {discLogo}, image2={botLogo}>
+			</div>
 		</section>
 	</div>
 </Layout>

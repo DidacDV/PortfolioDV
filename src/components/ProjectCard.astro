@@ -1,0 +1,45 @@
+---
+interface Props {
+    name: string;
+    image: string;
+    image2: string
+    desc: string;
+}
+
+const name = Astro.props.name;
+const image = Astro.props.image;
+const desc = Astro.props.desc;
+const image2 = Astro.props.image2;
+
+console.log(image);
+---
+<div id ="main">
+    <div id = "NameAndDesc">
+        <h2>{name}</h2>
+        <p>{desc}</p>
+    </div>
+    <div id ="imgs">
+        <img src= {image} alt="DiscordLogo" height="150px" width="150px">
+        <img src= {image2} alt= "BotLogo" height="150px" width="150px">
+    </div>
+</div>
+
+
+<style>
+
+    #main {
+        display: flex;
+    }
+
+    #main #NameAndDesc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main #imgs {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+</style>
