@@ -4,14 +4,15 @@ interface Props {
     image: string;
     image2: string
     desc: string;
+    roundImage2: boolean;
 }
 
 const name = Astro.props.name;
 const image = Astro.props.image;
 const desc = Astro.props.desc;
 const image2 = Astro.props.image2;
-
-console.log(image);
+const roundImage2 = Astro.props.roundImage2
+console.log(roundImage2);
 ---
 <div id ="main">
     <div id = "NameAndDesc">
@@ -19,8 +20,8 @@ console.log(image);
         <p>{desc}</p>
     </div>
     <div id ="imgs">
-        <img src= {image} alt="DiscordLogo" height="150px" width="150px">
-        <img src= {image2} alt= "BotLogo" height="150px" width="150px">
+        <img src= {image}  height="130px" width="130px">
+        <img class ={roundImage2 ? 'rounded' : ''} src= {image2} alt= "2ndimg" height="130px" width="130px">
     </div>
 </div>
 
@@ -28,7 +29,17 @@ console.log(image);
 <style>
 
     #main {
+        justify-content: space-between;
         display: flex;
+    }
+
+    h2 {
+        margin-bottom: 2px;
+    }
+
+    p {
+        width: 700px;
+        font-size: 17px;
     }
 
     #main #NameAndDesc {
@@ -38,8 +49,12 @@ console.log(image);
 
     #main #imgs {
         display: flex;
-        flex-direction: column;
+
+        gap: 20px;
     }
 
+    .rounded {
+        border-radius: 50%;
+    }
 
 </style>

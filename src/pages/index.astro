@@ -5,6 +5,10 @@ import Projects from './Projects.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 const discLogo = "./src/components/icons/DiscordLogo.png";
 const botLogo = "./src/components/icons/botLogo.jpg";
+const descDiscord = "Project done mainly using the documentation for the discord python library. While learning this library, i also got into coroutines and tasks with python (with that not being the main goal). This is something i did to extend my python knowledge and explore API's while solving a problem i had with music bots."
+const mapLogo = "./src/components/icons/mapLogo.png"
+const hackLogo = "./src/components/icons/hackLogo.png"
+const descMap = "Mapa"
 ---
 
 <Layout title="DidacDV Portfolio - Informatic Engineer">
@@ -35,7 +39,10 @@ const botLogo = "./src/components/icons/botLogo.jpg";
 		<section id = "projects">
 			<h1>Projects</h1>
 			<div id = "projectContainer">
-				<ProjectCard name='DiscordBot', desc='Bot made with python', image= {discLogo}, image2={botLogo}>
+				<ProjectCard name='DiscordBot', desc={descDiscord}, image= {discLogo}, image2={botLogo}, roundImage2 = {true}>
+				</ProjectCard>
+				<ProjectCard name = 'InteractiveMap', desc = {descMap}, image = {mapLogo}, image2 = {hackLogo}, roundImage2 = {false}>
+				</ProjectCard>
 			</div>
 		</section>
 	</div>
@@ -110,6 +117,12 @@ const botLogo = "./src/components/icons/botLogo.jpg";
 	#logoContainer {
 		display: flex;
 		flex-direction: column;
+	}
+
+	#projectContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
 	}
 
 </style>
