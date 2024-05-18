@@ -1,0 +1,9 @@
+export const discLogo = "./src/components/icons/DiscordLogo.png";
+export const botLogo = "./src/components/icons/botLogo.jpg";
+export const descDiscord = "Project done mainly using the documentation for the discord python library. While learning this library, i also got into coroutines and tasks with python (with that not being the main goal). This is something i did to extend my python knowledge and explore API's while solving a problem i had with music bots.";
+export const mapLogo = "./src/components/icons/mapLogo.png";
+export const hackLogo = "./src/components/icons/hackLogo.png";
+export const descMap = "Project done at HackUPC with the purpose of building an app to interconnect people given his data (in this case a data set of multiple travelers) using multiple algorithms. We did it using Python, C++ and the QT framework to create the interface.";
+export const procLogo = './src/components/icons/procLogo.png';
+export const proc2Logo = './src/components/icons/proc2Logo.png';
+export const descProc = 'Project given at UPC for getting better with C++ and OOP. It simulates through console how a cluster with his multiple procs work, each one of them having their own memory available for the processes and having to manage it correctly.';

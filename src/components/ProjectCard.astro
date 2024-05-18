@@ -12,7 +12,6 @@ const image = Astro.props.image;
 const desc = Astro.props.desc;
 const image2 = Astro.props.image2;
 const roundImage2 = Astro.props.roundImage2
-console.log(roundImage2);
 ---
 <div id ="main">
     <div id = "NameAndDesc">
@@ -20,8 +19,8 @@ console.log(roundImage2);
         <p>{desc}</p>
     </div>
     <div id ="imgs">
-        <img src= {image}  height="130px" width="130px">
-        <img class ={roundImage2 ? 'rounded' : ''} src= {image2} alt= "2ndimg" height="130px" width="130px">
+        <img src= {image}  height="120px" width="120px">
+        <img class ={roundImage2 ? 'rounded' : ''} src= {image2} alt= "2ndimg" height="120px" width="120px">
     </div>
 </div>
 

@@ -3,12 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
 import Projects from './Projects.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-const discLogo = "./src/components/icons/DiscordLogo.png";
-const botLogo = "./src/components/icons/botLogo.jpg";
-const descDiscord = "Project done mainly using the documentation for the discord python library. While learning this library, i also got into coroutines and tasks with python (with that not being the main goal). This is something i did to extend my python knowledge and explore API's while solving a problem i had with music bots."
-const mapLogo = "./src/components/icons/mapLogo.png"
-const hackLogo = "./src/components/icons/hackLogo.png"
-const descMap = "Mapa"
+import { discLogo, botLogo, descDiscord, mapLogo, hackLogo, descMap, procLogo, proc2Logo, descProc } from '../data/data.js';
 ---
 
 <Layout title="DidacDV Portfolio - Informatic Engineer">
@@ -43,7 +38,10 @@ const descMap = "Mapa"
 				</ProjectCard>
 				<ProjectCard name = 'InteractiveMap', desc = {descMap}, image = {mapLogo}, image2 = {hackLogo}, roundImage2 = {false}>
 				</ProjectCard>
+				<ProjectCard name='Multiprocessor architecture simulation', desc = {descProc}, image= {procLogo}, image2 = {proc2Logo}, roundImage2 = {false}>
+				</ProjectCard>
 			</div>
+			<p>All of them can be found at my github linked above.</p>
 		</section>
 	</div>
 </Layout>
@@ -117,6 +115,10 @@ const descMap = "Mapa"
 	#logoContainer {
 		display: flex;
 		flex-direction: column;
+	}
+
+	#projects p {
+		font-size: 17px;
 	}
 
 	#projectContainer {
