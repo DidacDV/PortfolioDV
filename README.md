@@ -2,4 +2,5 @@
 
 Building a web portfolio with Astro, HTML and CSS while learning Astro.
 
-Currently working on the second section (ways of contacting me) using svg for the logos.
+Currently only at local host, to check it out you can clone the repo and execute "npm run".
+
